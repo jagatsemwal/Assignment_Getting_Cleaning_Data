@@ -51,8 +51,11 @@ names(subset_df)<-gsub("()","",names(subset_df))
 names(subset_df)<-gsub("-","",names(subset_df))
 names(subset_df)<-gsub("\\(","",names(subset_df))
 names(subset_df)<-gsub("\\)","",names(subset_df))
+names(subset_df)<-gsub("acc","accelerometer",names(subset_df))
+names(subset_df)<-gsub("gyro","gyroscope",names(subset_df))
+names(subset_df)<-gsub("mag","magnitude",names(subset_df))
 
-library(dplyr)
+suppressMessages(library(dplyr))
 
 
 print("Tidy dataset named subset_df has been created for you to examine")
